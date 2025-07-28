@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+async function Sleep(){
+    return new Promise((resolve , reject )=>{
+        setTimeout(() => {
+            resolve(45)
+    },1000)
+})
+}
+
+// let a = await Sleep()    // YE NHI CHALEGA...
+// let b = await Sleep()
+
+function sum(a,b,c){
+    return a + b + c
+}
+
+
+
+(async function main(){       //IIFE
+// let a = await Sleep()
+// console.log(a)
+// let b = await Sleep()
+// console.log(b)
+
+// let [x,y,...rest] = [2,3,6,3,5,2,4]      //DESTRUCTURING IN ARRAY
+// console.log(x,y,rest)
+
+
+let obj = {                      //DESTRUCTURING IN OBJECT
+    a:1,
+    b:2,
+    c:3
+}
+
+let {a,b}=obj
+console.log(a,b)
+
+
+// SPREAD OPERATOR
+let arr = [1,2,3]
+console.log(sum(arr[0],arr[1], arr[2]))
+console.log(sum(...arr))
+
+// creating object from array
+let obj1 = {...arr}
+console.log(obj1)
+
+
+//HOSTING - var se declare variable top of the code move hoga but variable nhi isse erorr show nhi hoga but value undefined milegi... global ke liye global aur local ke liye local block me.
+
+
+
+
+})()
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

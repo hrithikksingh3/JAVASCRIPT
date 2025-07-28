@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hrithik is Hacker")
+        console.log("Hrithik is Heker")
+        setTimeout(()=>{
+            console.log("I am a setTimeout")   // This will be run at ent bcz asynchronous nature of javascript.
+        },2000)
+
+        console.log("The Lasttt")
+
+
+
+
+
+        const fn = ()=>{
+            console.log("Hello")
+        }
+
+        const callback = (arg, fn)=>{
+            console.log(arg)
+            fn()
+        }
+
+
+        const loadScript = (src, callback) => {
+          let sc = document.createElement("script")
+          sc.src = src
+          sc.onload = callback("Hrithik" , fn)
+          document.head.append(sc)
+        }
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js", callback)
+    </script>
+</body>
+</html>

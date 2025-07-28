@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Hey I am Text
+        </div>
+        <div id="btn"><button>Click Here</button></div>
+    </div>
+
+
+    <script>
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events [MOUSE EVENTS]
+       let button = document.getElementById("btn")
+       button.addEventListener("click",() =>{
+        document.querySelector(".text").innerHTML="Hey<b>  I am clicked bro </b>"
+       })
+
+       document.addEventListener("dblclick",()=>{
+        alert("Why you double clicked dumbbb , click single time")
+       })
+
+       document.addEventListener("contextmenu",()=>{
+        alert("Dont hack us , left Click please")
+       })
+
+       document.addEventListener("keydown", (e)=>{
+        console.log(e.key , e.keyCode)
+       })
+    </script>
+</body>
+</html>

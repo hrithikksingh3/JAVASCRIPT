@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display: flex;
+            border: 2px solid black;
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+        }
+        .text h1 , p{
+            padding: 2px 0px;
+        }
+.img{
+    position: relative;
+}
+        .capsule {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 5px;
+            z-index: 10;
+            background-color: black;
+            /* display: block; */
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+
+
+
+    <script>
+        function createCard(title, cName , views , monthsOld , duration , thumnail){
+
+            let viewsNumber
+            if (views<1000000) {
+                viewsNumber = views/1000 + "K"
+            } else {
+                viewsNumber = views/1000000 + "M"
+            }
+            let html = `<div class="card">
+            <div class="image">
+                <img src="${thumnail}">
+                <div class="capsule">${duration}</div>
+            </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cName} . ${viewsNumber} views  . ${monthsOld}</p>
+            </div>
+        </div>`
+        document.querySelector(".container").innerHTML = html
+        }
+
+        createCard("How to automate whatsapp | Python series" , "Codersvoice" , 30000 , 7 , "05:21" , "https://i.ytimg.com/vi/P8FaMwphRwE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLBPVEXRV5wQ-a-C-cg3v7rVsJr0XA")
+    //     createCard("How to automate whatsapp | Python series" , "Codersvoice" , 300000 , 7 , "05:21" , "https://i.ytimg.com/vi/P8FaMwphRwE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLBPVEXRV5wQ-a-C-cg3v7rVsJr0XA")
+    // </script>
+</body>
+</html>

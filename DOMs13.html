@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                
+    
+    <style>
+        .box{
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+         <div class="box">Hrithik Singh 1</div>
+         <div class="box">Hrithik Singh 1.5</div>
+         <div class="box">Hrithik Singh 2</div>
+         <div class="box">Hrithik Singh 3</div>
+         <div id= "yellow" class="box">Hrithik Singh 3.5</div>
+         <div class="box">Hrithik Singh 4</div>
+         <div class="box">Hrithik Singh 5</div>
+        
+    </div>
+
+
+    <script>
+
+    console.log("Hrithik")
+    let boxes = document.getElementsByClassName("box")
+    console.log(boxes.length)
+    boxes[4].style.backgroundColor = "red"
+    boxes[5].style.backgroundColor = "blue"
+
+    document.getElementById("yellow").style.backgroundColor = "yellow"
+
+    //works on first element with class box.
+    document.querySelector(".box").style.backgroundColor = "green"
+
+    //HTML collection (.style not work , for loop should be use)
+    // document.querySelectorAll (".box").forEach(e=>{
+    //     e.style.backgroundColor = "purple"
+    // })
+
+    document.getElementsByTagName(div) //saare div aa jaengene (html collection return krta h)
+
+
+    //MATECHES
+    e = document.getElementsByTagName("div")
+    e[4].matches("#yellow")
+    e[5].matches("#yellow")
+
+    //CLOSEST
+    e[3].closest("container")
+    e[3].closest("html")
+
+    //CONTAINS
+    document.querySelector(".container").contains(e[2])
+    document.querySelector(".container").contains(e[0])
+    document.querySelector(".container").contains("body")
+    document.querySelector("body").contains(".container")
+
+
+    </script>
+</body> 
+
+</html>

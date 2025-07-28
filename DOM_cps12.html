@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Children , parent and sibling nodes</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border : 2px solid black;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>  
+    </table>
+
+
+    <script>
+        document.body.childNodes
+        document.body.childNodes[0]
+        document.body.childNodes[1].childNodes
+        let cont = document.body.childNodes[1]
+
+        cont.firstChild
+        cont.lastChild
+
+        cont.firstElementChild
+        cont.lastElementChild
+
+        cont.lastElementChild.style.color = "red"
+        cont.lastElementChild.style.backgroundColor = "greem" 
+
+        document.body.firstElementChild
+        document.body.firstElementChild.childNodes // all nodes
+        document.body.firstElementChild.children //only element
+        document.body.firstElementChild.children[0] //only element by index
+        document.body.firstElementChild.children[0].nextElementSibling
+        document.body.firstElementChild.children[2].previousElementSibling
+        document.body.firstElementChild.children[2].previouSibling
+        document.body.firstElementChild.children[2].parentElement  
+
+
+        //TABLE 
+        document.body.children[1]
+        document.body.children[1].rows 
+        document.body.children[1].caption
+
+        //more properties in the notes 
+
+
+    </script>
+</body>
+</html>

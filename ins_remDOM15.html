@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="display: inline;" data-createdby: "hrithik">
+            Hey I am a box
+        </div>
+    </div>
+
+    <script>
+        //innterhtml
+        document.querySelector(".box").innerHTML
+        document.querySelector(".container").innerHTML
+
+        // text of innterhtml
+        document.querySelector(".box").innerText
+        document.querySelector(".container").innerText
+
+        //both inner and outer html
+        document.querySelector(".container").outerHTML
+        //Tag name
+        document.querySelector(".container").tagName
+
+        //NOde name
+        document.querySelector(".container").nodeName
+
+        //Text content inside the tag
+        document.querySelector(".container").textContent
+
+        //Hide the element
+        // document.querySelector(".container").hidden = true
+
+        //change the innerHtml
+        document.querySelector(".box").innerHTML = "Hey i am hrithik"
+
+        // has attribute
+        document.querySelector(".box").hasAttribute("style")
+
+        //get attribute
+        document.querySelector(".box").getAttribute("style")
+
+        //get attribute
+        document.querySelector(".box").setAttribute("style" , "display : flex")
+
+
+        // all attributes
+        document.querySelector(".box").attributes
+
+        // remove attribute
+        document.querySelector(".box").removeAttribute("style")
+
+        //edit website
+        document.designMode = "on"
+
+        //data
+        document.querySelector(".box").dataset //: created by hrithik
+
+        //Insert element
+        let div = document.createElement("div")
+        div.innerHTML = "Hey I have been inserted by <b>Hrithik</b>"
+        div.setAttribute("class", "created")
+        document.querySelector(".container").append(div) // container ke andr end me
+
+        // PREPEND : container ke andr sbse pehle 
+        // AFTER : container ke baad
+        // BEFORE : container ke pehle
+
+
+
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend" , "<b> Hellow world i am inserted html </b>")
+
+        // Afterbegin : container ke andr first me
+        // Afterend : container ke baad 
+        // Beforebegin : container ke pehle
+        // Beforeend : container ke andr last me
+
+        // you can insert html , element and text the same using insertAdjacent.... function
+
+        
+
+        // Node remove
+        document.querySelector(".box").remove() // .box class ka first element remove krega.
+        
+
+        //classlist and classname (add or remove classes as well)
+        document.querySelector(".container").classList
+        document.querySelector(".container").classList.add("hrithik")
+        document.querySelector(".container").classList.remove("hrithik")
+        document.querySelector(".container").className.add("red")
+
+        document.querySelector(".container").classList.toggle("red")  //toggle the class
+
+
+
+    </script>
+
+</body>
+</html>

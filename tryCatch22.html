@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter first Number: ")
+        let b = prompt("Enter second Number: ") 
+
+        if(isNaN(a) || isNaN(b)){          // Throwing an error by us to user.
+            throw SyntaxError("Sorry this is not allowed.")
+        }
+
+        let sum = parseInt(a) + parseInt(b)
+
+        function main(){
+let x = 1
+            try {                                        // Handiling an error by us.
+                console.log("the sum is : ",sum * x)
+                return true
+
+            } catch (error) {
+                console.log("Error aa gya bhai")
+                return false
+            }
+    
+            finally{             // Finally is used when we have to run it even after the return statement
+                console.log("server is being closed...")
+            }
+        }
+let c = main()
+    </script>
+</body>
+</html>
